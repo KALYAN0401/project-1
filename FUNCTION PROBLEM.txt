@@ -1,0 +1,40 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+int main()
+{
+    long long n; long long c; long long d;
+    
+    cin>>n;
+    int sum1=0;
+    int sum2=0;
+    
+    
+    vector <long long> a;
+    vector <long long> b;
+    for( long long i=1;i<=n;i++){
+        if(i%2==0){
+            a.push_back(i);
+        }else{
+            b.push_back(i);
+        }
+    }
+   
+   accumulate(a.begin(),a.end(),sum1);
+      
+       accumulate(b.begin(),b.end(),sum2);
+      
+    
+    cout<<sum1-sum2<<endl;
+
+    return 0;
+}
